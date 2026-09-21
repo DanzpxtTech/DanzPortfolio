@@ -1,0 +1,101 @@
+:root {
+    --normal-text: #ffffff;
+    --header-text: rgb(255, 191, 0);
+    --card-background: #2e2e2e;
+    --border-color: rgb(0, 0, 0);
+    --darker-card-background: #201f1f;
+}
+
+body {
+    box-sizing: border-box;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: var(--card-background);
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 25px;
+    font-size: 25px;
+    height: 60px;
+    width: 100%;
+    border: 1px solid var(--border-color);
+    align-self: flex-start;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-evenly;
+}
+
+header a {
+    color: var(--header-text);
+    text-decoration: none;
+    display: inline-block; /* Necessário para que o transform funcione perfeitamente */
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+header a:hover {
+    color: var(--header-text);
+    text-decoration: none;
+    transform: scale(1.080);
+}
+
+.Projects {
+    color: var(--normal-text);
+    align-items: center;
+    padding: 10px;
+    border-radius: 25px;
+    min-width: 90%;
+    height: 500px;
+    margin: 5px;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-background);
+    display: flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+}
+
+.Projects div:nth-child(1) {
+    border-radius: 15px;
+    padding: 10px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    display: flex;
+    height: 90%;
+    width: 240px;
+    background-color: var(--darker-card-background);
+}
+
+.Projects div:nth-child(1) h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.Projects div:nth-child(2) {
+    border-radius: 15px;
+    padding: 10px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    display: flex;
+    height: 90%;
+    min-width: 250px;
+    background-color: var(--darker-card-background);
+}
+
+.Projects div:nth-child(3) {
+    border-radius: 15px;
+    padding: 10px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    display: flex;
+    height: 90%;
+    width: 240px;
+    background-color: var(--darker-card-background);
+}
