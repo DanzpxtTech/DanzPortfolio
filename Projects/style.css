@@ -1,101 +1,273 @@
 :root {
-    --normal-text: #ffffff;
-    --header-text: rgb(255, 191, 0);
-    --card-background: #2e2e2e;
-    --border-color: rgb(0, 0, 0);
-    --darker-card-background: #201f1f;
+  --normal-text: #ffffff;
+  --header-text: rgb(255, 191, 0);
+  --card-background: #2e2e2e;
+  --border-color: rgb(0, 0, 0);
+  --darker-card-background: rgb(32, 31, 31);
+  --border-div: rgb(231, 231, 68);
+  --white-background: rgba(255, 255, 255, 0.856);
+  --black-text: rgba(17, 17, 17, 0.988);
+}
+
+.oswald {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 10;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  min-height: 100vh;
 }
 
 body {
-    box-sizing: border-box;
-    min-height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  box-sizing: border-box;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 header {
-    background-color: var(--card-background);
-    font-family: 'Courier New', Courier, monospace;
-    border-radius: 25px;
-    font-size: 25px;
-    height: 60px;
-    width: 100%;
-    border: 1px solid var(--border-color);
-    align-self: flex-start;
-    display: flex;
-    flex-direction: row;
-    align-items:center;
-    justify-content: space-evenly;
+  margin: 3px;
+  background-color: var(--card-background);
+  font-family: "Courier New", Courier, monospace;
+  border-radius: 25px;
+  font-size: 25px;
+  height: 60px;
+  width: 100%;
+  border: 1px solid var(--border-color);
+  align-self: flex-start;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 header a {
-    color: var(--header-text);
-    text-decoration: none;
-    display: inline-block; /* Necessário para que o transform funcione perfeitamente */
-    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  color: var(--header-text);
+  text-decoration: none;
+  display: inline-block; /* Necessário para que o transform funcione perfeitamente */
+  transition:
+    transform 0.3s ease-in-out,
+    color 0.3s ease-in-out;
 }
 
 header a:hover {
-    color: var(--header-text);
-    text-decoration: none;
-    transform: scale(1.080);
+  color: var(--header-text);
+  text-decoration: none;
+  transform: scale(1.08);
 }
 
 .Projects {
-    color: var(--normal-text);
-    align-items: center;
-    padding: 10px;
-    border-radius: 25px;
-    min-width: 90%;
-    height: 500px;
-    margin: 5px;
-    border: 1px solid var(--border-color);
-    background-color: var(--card-background);
-    display: flex;
-    flex-direction:row;
-    justify-content: space-evenly;
+  flex: 1;
+  color: var(--normal-text);
+  align-items: center;
+  padding: 10px;
+  border-radius: 25px;
+  min-width: 90%;
+  min-height: 600px;
+  margin: 5px;
+  border: 1px solid var(--border-color);
+  background-color: var(--white-background);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  box-shadow: 0 10px 30px var(--card-background);
 }
 
 .Projects div:nth-child(1) {
-    border-radius: 15px;
-    padding: 10px;
-    align-items: center;
-    flex-direction: column;
-    justify-content: flex-start;
-    display: flex;
-    height: 90%;
-    width: 240px;
-    background-color: var(--darker-card-background);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: black;
+  opacity: 0.90;
+  border-radius: 15px;
+  padding: 10px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  display: flex;
+  min-height: 600px;
+  min-width: 300px;
+  background-color: var(--card-background);
 }
 
 .Projects div:nth-child(1) h1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .Projects div:nth-child(2) {
-    border-radius: 15px;
-    padding: 10px;
-    align-items: center;
-    flex-direction: column;
-    justify-content: flex-start;
-    display: flex;
-    height: 90%;
-    min-width: 250px;
-    background-color: var(--darker-card-background);
+  color: black;
+  opacity: 0.90;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border-radius: 15px;
+  padding: 10px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  display: flex;
+  min-height: 600px;
+  min-width: 300px;
+  background-color: var(--card-background);
 }
 
 .Projects div:nth-child(3) {
-    border-radius: 15px;
-    padding: 10px;
-    align-items: center;
-    flex-direction: column;
-    justify-content: flex-start;
-    display: flex;
-    height: 90%;
-    width: 240px;
-    background-color: var(--darker-card-background);
+  color: black;
+  opacity: 0.90;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border-radius: 15px;
+  padding: 10px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  display: flex;
+  min-height: 600px;
+  min-width: 300px;
+  background-color: var(--card-background);
 }
+
+.Projects div {
+  border: 3px solid var(--border-div);
+  text-decoration: none;
+  box-shadow: 0 10px 30px rgba(243, 243, 7, 0.107);
+}
+/* ABOUT ME*/
+
+.About-me {
+  padding: 25px;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(243, 243, 7, 0.18);
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  border-radius: 25px;
+  width: 90%;
+  border: 5px solid var(--border-color);
+  margin: 25px;
+  flex: 1;
+}
+
+.About-me h1 {
+  font-size: 45px;
+  color: black;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.About-me img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 5px solid;
+}
+
+/* ABOUT ME: blocos do portfólio (cole ACIMA do comentário /*TODO no fim do style.css) */
+
+.About-me .content {
+max-width: 65ch;
+line-height: 1.7;
+}
+
+.about-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 24px;
+width: 100%;
+margin-top: 32px;
+}
+
+.about-grid article {
+padding: 20px;
+border: 3px solid var(--border-div);
+border-radius: 15px;
+background-color: var(--card-background);
+color: var(--normal-text);
+line-height: 1.6;
+box-shadow: 0 10px 30px rgba(243, 243, 7, 0.107);
+}
+
+.about-grid .about-tech {
+grid-column: 1 / -1;
+}
+
+.about-grid h2 {
+margin: 0 0 12px;
+font-family: "Courier New", Courier, monospace;
+font-size: 1.4rem;
+color: var(--header-text);
+}
+
+.about-grid h3 {
+margin: 0 0 8px;
+font-size: 1rem;
+}
+
+.about-grid p {
+margin: 0 0 10px;
+}
+
+.tech-groups {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+gap: 20px;
+}
+
+.tech-list {
+display: flex;
+flex-wrap: wrap;
+gap: 8px;
+margin: 0;
+padding: 0;
+list-style: none;
+}
+
+.tech-list li {
+padding: 6px 14px;
+border: 2px solid var(--border-div);
+border-radius: 999px;
+background-color: var(--darker-card-background);
+}
+
+.tech-list.learning li {
+border-style: dashed;
+border-color: var(--header-text);
+color: #d0d0d0;
+}
+
+.language-list {
+margin: 0 0 12px;
+padding: 0;
+list-style: none;
+}
+
+.language-list li {
+display: flex;
+justify-content: space-between;
+gap: 16px;
+padding: 8px 0;
+}
+
+.language-list li + li {
+border-top: 1px solid var(--border-color);
+}
+
+.language-list li span:last-child {
+color: #d0d0d0;
+text-align: right;
+}
+
+.about-grid .note {
+margin: 0;
+color: #b8b8b8;
+font-size: 0.85rem;
+}
+
+/*TODO:
+//[]Projects may be looking better in white
+//[]check the unliked claude <p's>
